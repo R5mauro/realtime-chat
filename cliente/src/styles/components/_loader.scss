@@ -1,0 +1,41 @@
+.loader-global {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .loader-global-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    p {
+        font-size: 3.6rem !important;
+        font-weight: bold;
+    }
+
+    .animation-global {
+        width: 3rem;
+
+        p {
+            position: relative;
+            overflow: hidden;
+            animation: typing 2s steps(3) infinite;
+        }
+    }
+}
+
+@keyframes typing {
+    0% {
+        width: 100%;
+    }
+
+    50% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}

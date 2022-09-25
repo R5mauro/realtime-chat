@@ -1,0 +1,38 @@
+.loader .message-content {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .loader-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        font-weight: bold;
+    }
+}
+
+.animation {
+    width: 13px;
+
+    p {
+        // width: 13px;
+        position: relative;
+        overflow: hidden;
+        animation: typing 2s steps(3) infinite;
+    }
+}
+
+@keyframes typing {
+    0% {
+        width: 100%;
+    }
+
+    50% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}

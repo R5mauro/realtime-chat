@@ -1,0 +1,44 @@
+.chat-temporal-heading {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.chat-body {
+    width: 100%;
+    flex: 1;
+    height: 90%;
+    max-height: 90%;
+}
+
+.login-temporal {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    row-gap: 1rem;
+
+    input {
+        padding: .7rem;
+        outline: none;
+        border: none;
+        border-radius: 2px;
+    }
+
+    .btn-file-upload {
+        background-color: $celeste;
+        color: $negro;
+
+        &:hover {
+            background-color: darken($color: $celeste, $amount: 8%);
+            cursor: pointer;
+        }
+    }
+
+    .file-upload {
+        display: none;
+    }
+
+}

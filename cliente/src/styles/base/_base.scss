@@ -1,0 +1,138 @@
+.app {
+    align-items: center;
+    column-gap: 1rem;
+    display: flex;
+    background: linear-gradient(to bottom, $azulClaro 0%, $azulOscuro 100%);
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.chat {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    justify-content: space-between;
+    padding: 2rem;
+    width: 70%;
+
+}
+
+.display-none {
+    display: none;
+}
+
+.glassmorphism {
+    background: rgba(239, 239, 239, 0.06);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+    backdrop-filter: blur(0.5px);
+    -webkit-backdrop-filter: blur(0.5px);
+    border-radius: 5px;
+}
+
+.type-form {
+    display: flex;
+    column-gap: 1rem;
+    height: 3rem;
+    justify-content: space-between;
+    width: 100%;
+
+    input {
+        padding: .5rem;
+        outline: 0;
+        flex: 1;
+    }
+
+    #user-name {
+        max-width: 20%;
+    }
+
+    button {
+        padding: .5rem;
+        background-color: $naranja;
+        border-radius: .2rem;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.messages {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    height: 95%;
+    max-height: 95%;
+    width: 100%;
+    padding: 1rem 0;
+    text-align: justify;
+    -webkit-box-shadow: inset 0px 23px 25px -18px rgba(10, 19, 36, 0.3);
+    box-shadow: inset 0px 23px 25px -18px rgba(10, 19, 36, 0.3);
+
+    .messages-content {
+        height: auto;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        width: 100%;
+
+        span {
+            font-weight: 600;
+        }
+
+        &::-webkit-scrollbar {
+            width: 5px;
+            background: transparent;
+            opacity: 0.5;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            // background: $naranja;
+            background: rgba($color: $grisClaro, $alpha: 0.1);
+            border-radius: 2px;
+        }
+    }
+}
+
+.message {
+    display: flex;
+    align-items: flex-end;
+    margin: .5rem;
+    flex-flow: wrap;
+}
+
+.message-content {
+    background-color: $grisClaro;
+    border-radius: .5rem;
+    border-bottom-left-radius: 0;
+    color: $negro ;
+    padding: .8rem 1rem;
+    max-width: 70%;
+    word-break: break-all;
+}
+
+.my-message {
+    display: flex;
+    justify-content: flex-end;
+
+    .message-content {
+        background-color: $celeste;
+        border-radius: .5rem;
+        border-bottom-right-radius: 0 !important;
+    }
+}
+
+.btn {
+    background-color: $naranja;
+    color: $grisClaro;
+    padding: .6rem;
+    border-radius: .2rem;
+    transition: all .3s ease;
+
+    &:hover {
+        background-color: darken($naranja, 5%);
+        cursor: pointer;
+    }
+}

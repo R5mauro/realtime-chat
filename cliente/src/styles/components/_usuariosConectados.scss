@@ -1,0 +1,47 @@
+.usuarios-conectados {
+    padding: 2rem;
+
+    p {
+        font-weight: 600;
+        padding: .3rem 0;
+
+    }
+
+
+    .me {
+        color: $naranja;
+
+        button {
+            background-color: transparent;
+            color: $grisClaro;
+            font-weight: 600;
+            font-size: 1.5rem;
+            position: relative;
+
+            &:hover {
+                cursor: pointer;
+
+                span {
+                    // visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+
+        span {
+            // visibility: hidden;
+            opacity: 0;
+            color: $grisClaro;
+            background-color: $azulOscuro;
+            position: absolute;
+            top: -50px;
+            bottom: 100;
+            right: -24px;
+            padding: .5rem;
+            border-radius: .4rem;
+            cursor: default;
+            transition: all .2s ease;
+            font-size: 1.3rem;
+        }
+    }
+}
