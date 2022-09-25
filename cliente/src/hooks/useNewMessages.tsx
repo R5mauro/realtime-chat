@@ -4,9 +4,10 @@ import { UserContext } from '../context/TemporalUserContext';
 import { Message } from '../types/types';
 import { soundNewMessage } from '../utilities/soundMessage.utility';
 import { useUsuariosConectados } from './useUsuariosConectados';
+// const socket = io("http://localhost:4000");
+const socket = io();
 
 
-const socket = io("http://localhost:4000");
 interface Props {
     message?: string,
     type: "principal" | "temporal"

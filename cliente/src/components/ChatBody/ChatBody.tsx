@@ -5,7 +5,7 @@ import { FirebaseMessage } from '../../types/types';
 import { auth, db } from "../../services/firebase.service";
 import { addDoc, collection, onSnapshot, orderBy, query, serverTimestamp } from 'firebase/firestore';
 import { useAuthState } from "react-firebase-hooks/auth";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 
 interface Props {
     type: "principal" | "temporal"
