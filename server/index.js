@@ -13,7 +13,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const server = http.createServer(app);
 const io = new SocketServer(server, {
     cors: {
-        // origin: "*",
+        origin: "*",
     }
 });
 
@@ -73,7 +73,7 @@ io.on("connection", (socket) => {
     })
 })
 
-app.use(express.static(join(__dirname, "../cliente/build")))
+// app.use(express.static(join(__dirname, "../cliente/build")))
 // console.log(join(__dirname, "../cliente/build"));
 server.listen(PORT);
 console.log("server started on", PORT);

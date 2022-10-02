@@ -20,9 +20,10 @@
 
 .heading-tooltip {
     align-items: center;
-    justify-content: center;
-    display: flex;
     column-gap: 1rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
 
     button {
         background-color: $naranja;
@@ -34,8 +35,8 @@
         width: 2rem;
 
         span {
-            top: -0.5rem;
-            right: 19rem;
+            top: -2.5rem;
+            right: -19rem;
         }
     }
 
