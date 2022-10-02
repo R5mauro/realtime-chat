@@ -9,6 +9,7 @@ import io from "socket.io-client";
 import { temporalUserValidate } from "../../utilities/temporalUserValidate.utility";
 import { useUsuariosConectados } from "../../hooks/useUsuariosConectados";
 import { User } from "../../types/types";
+import Tooltip from "../Tooltip/Tooltip";
 // const socket = io("http://localhost:4000");
 const socket = io();
 
@@ -61,7 +62,14 @@ const ChatTemporal = () => {
                     <UsuariosConectados />
                     <div className="chat glassmorphism">
                         <div className="chat-temporal-heading">
-                            <h1>Chat Temporal</h1>
+                            <div className="heading-tooltip">
+
+                                <h1>Chat Temporal</h1>
+                                <button className="tooltip">
+                                    <i className="fa-solid fa-info"></i>
+                                    <Tooltip msg={"Los mensajes enviados en este chat se eliminaran al refrescar la página."} />
+                                </button>
+                            </div>
                             <Link to="/" className="btn"><i className="fa-sharp fa-solid fa-arrow-left"></i> Chat Principal</Link>
                         </div>
                         <ChatBody type={"temporal"} />

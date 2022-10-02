@@ -51,6 +51,13 @@ const ChatBody = ({ type }: Props) => {
 
     }
 
+    let content = document.querySelector(".messages-content");
+    const toBottom = () => {
+        if (content !== null) {
+            content.lastElementChild?.scrollIntoView({ behavior: "smooth" });
+        }
+    }
+
     useEffect(() => {
         const newQuery = query(collection(db, "messages"), orderBy("timestamp"));
         const unsubscribe = onSnapshot(newQuery, (querySnapshot) => {
@@ -65,6 +72,9 @@ const ChatBody = ({ type }: Props) => {
         return unsubscribe;
     }, [])
 
+    useEffect(() => {
+        toBottom();
+    }, [messagesFirebase])
 
 
     return (

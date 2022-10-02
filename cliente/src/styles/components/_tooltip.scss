@@ -1,0 +1,29 @@
+.tooltip {
+    padding: .4rem;
+
+
+    span {
+        // visibility: hidden;
+        opacity: 0;
+        color: $grisClaro;
+        background-color: $azulOscuro;
+        position: absolute;
+        padding: .5rem;
+        border-radius: .4rem;
+        cursor: default;
+        transition: all .2s ease;
+        font-size: 1.3rem;
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        span {
+            opacity: 1;
+        }
+
+        span:hover {
+            opacity: 0;
+        }
+    }
+}

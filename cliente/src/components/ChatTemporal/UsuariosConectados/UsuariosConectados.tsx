@@ -2,6 +2,7 @@ import { useContext } from "react"
 import io from "socket.io-client";
 import { UserContext } from "../../../context/TemporalUserContext";
 import { useUsuariosConectados } from "../../../hooks/useUsuariosConectados";
+import Tooltip from "../../Tooltip/Tooltip";
 // const socket = io("http://localhost:4000");
 const socket = io();
 
@@ -22,7 +23,11 @@ const UsuariosConectados = () => {
 
     return (
         <div className={user.name.length > 0 ? "glassmorphism usuarios-conectados" : "display-none"}>
-            <p className="me">&bull; {user.name}  <button onClick={cerrarSesion}><i className="fa-solid fa-xmark"></i><span>Cerrar Sesión.</span></button> </p>
+            <p className="me">&bull; {user.name}
+                <button className="tooltip" onClick={cerrarSesion}>
+                    <i className="fa-solid fa-xmark"></i>
+                    <Tooltip msg={"Cerrar Sesión."} /></button>
+            </p>
             {/* <i class="fa-solid fa-arrow-left-from-line"></i> */}
             {usuariosConectados && usuariosConectados.map((usuarioConectado) => (
                 <p key={usuarioConectado.id} className={user.name === usuarioConectado.name ? "me" : ""}>&bull; {usuarioConectado.name}</p>
