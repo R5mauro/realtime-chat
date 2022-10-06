@@ -13,3 +13,6 @@ Tambien puede conectarse a este chat con dos (o más) distintos usuarios desde p
 
 ## Demo Live
 Link al [sitio](https://chat-r5.herokuapp.com)
+
+## Nota 
+Esta app aún no está optimizada para uso mobile.
